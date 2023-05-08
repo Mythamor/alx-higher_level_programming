@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#check if the PYFILE environment is set
+if [ -z "$PYFILE" ]
+then
+	echo "Error: PYFILE environment variable is not set"
+	exit 1
+fi
+
+#Check if the python file exists
+if echo "$PYFILE" | grep -q '\.py$'
+then 
+
+#Run the Python script 
+	python $PYFILE
+else 
+	echo: "Error: $PYFILE is not a valid Python file"
+	exit 1
+fi
