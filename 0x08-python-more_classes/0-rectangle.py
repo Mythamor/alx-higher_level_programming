@@ -6,6 +6,7 @@ Contains class Rectangle
 Empty class
 """
 
+
 class Rectangle():
     """
     Defines empty class Rectangle
