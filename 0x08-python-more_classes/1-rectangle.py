@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Modeule 1-rectangle
+Modeule 2-rectangle
 contains class Rectangle
 with private width and height attributes
 """
