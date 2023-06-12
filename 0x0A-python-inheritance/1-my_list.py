@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """
 Module 1-my_list
-
-class MyList that inherits from list
-return sorted list
 """
 
 
