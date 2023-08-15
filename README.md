@@ -1,16 +1,17 @@
-# 0x0D. SQL - Introduction
+# higher level programming
+This repo contains projects completed with higher-level-programming languages:
+* Python
+* JavaSCript
+* Database Management with MySQL
+  
 
-* SQL, MySQL
+## Concepts covered
+* Python conditions
+* Python file I/O
+* Python Class, inheritance, encapsulation
+* Unittests
+* SQL Queries
+* JavaScript class, constructor, objects and conditions
 
-## General
-* What’s a database
-* What’s a relational database
-* What does SQL stand for
-* What’s MySQL
-* How to create a database in MySQL
-* What does DDL and DML stand for
-* How to CREATE or ALTER a table
-* How to SELECT data from a table
-* How to INSERT, UPDATE or DELETE data
-* What are subqueries
-* How to use MySQL functions
+  Author:
+  [Mithamo Beth](https://github.com/Mythamor#hi-there-)
