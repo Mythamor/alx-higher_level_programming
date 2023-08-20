@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     # python query
     for state in session.query(State).filter(
-            State.name.like('%a')).order_by(State.id):
+            State.name.like('%a%')).order_by(State.id):
         print("{:d}: {:s}".format(state.id, state.name))
 
     session.close()
