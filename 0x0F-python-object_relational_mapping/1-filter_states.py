@@ -22,7 +22,7 @@ if __name__ = "__main__":
 				db=argv[3])
 
 	# create a cursor to execute SQL queries
-	cur = con.cursor()
+	cur = conn.cursor()
 	cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 	query_rows = cur.fetchall()
 	for row in query_rows:
