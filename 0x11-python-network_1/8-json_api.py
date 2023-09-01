@@ -8,16 +8,16 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    
-    letter = ""
-    url = "http://0.0.0.0:5000/search_user"
-    data = {'q': letter}
-    res = requests.post(url, data)
 
     if len(argv) < 2:
         letter = ""
     else:
         letter = argv[1]
+
+    url = "http://0.0.0.0:5000/search_user"
+    data = {'q': letter}
+
+    res = requests.post(url, data=data)
 
     try:
         data_dict = res.json()
