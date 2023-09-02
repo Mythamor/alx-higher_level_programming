@@ -17,9 +17,9 @@ if __name__ == "__main__":
             /{repo_name}/commits/"
 
     res = requests.get(url)
-    commits = res.json()
+    data = res.json()
 
-    for commit in commits[0:10]:
-        sha = commit["sha"]
-        author_name = commit['commit']['author']['name']
-        print(f"<{sha}>: {author_name}")
+    for i in range(0, 10):
+        sha = data[i]['sha']
+        author_name = data[i]['committer'].get('name')
+        print(f"{sha}: {author_name}\n")
