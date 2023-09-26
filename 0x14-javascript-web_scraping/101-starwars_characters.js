@@ -1,52 +1,22 @@
 #!/usr/bin/node
-
 const request = require('request');
-const argv = process.argv;
-const url = 'http://swapi.co/api/films/' + argv[2];
+const movieID = process.argv[2];
+const url = 'https://swapi-api.hbtn.io/api/films/' + movieID;
 
-function getcharacter (theUrl) {
-  const options = {
-    url: theUrl,
-    method: 'GET',
-    headers: {
-      Accept: 'application/json',
-      'Accept-Charset': 'utf-8'
-    }
-  };
-  request(options, function (err, res, body) {
-    if (err) {
-      console.log(err);
-    } else {
-      const json = JSON.parse(body);
-      // const status = res.statusCode;
-      // console.log(json);
-      console.log(json.name);
-    }
-  });
-}
+request(url, async (error, response, body) => {
+  if (error) { console.log(error); }
+  const result = JSON.parse(body);
 
-function getJson (theUrl) {
-  const options = {
-    url: theUrl,
-    method: 'GET',
-    headers: {
-      Accept: 'application/json',
-      'Accept-Charset': 'utf-8'
-    }
-  };
-  request(options, function (err, res, body) {
-    if (err) {
-      console.log(err);
-    } else {
-      const json = JSON.parse(body);
-      // const status = res.statusCode;
-      // console.log(json);
-      const characters = json.characters;
-      for (const i in characters) {
-        getcharacter(characters[i]);
-      }
-      return json;
-    }
-  });
-}
-getJson(url);
+  for (const charURL of result.characters) {
+    await new Promise((resolve, reject) => {
+      request(charURL, (err, r, body) => {
+        if (err) {
+          reject(err);
+        } else {
+          console.log(JSON.parse(body).name);
+          resolve();
+        }
+      });
+    });
+  }
+});
