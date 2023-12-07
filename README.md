@@ -13,5 +13,6 @@ This repo contains projects completed with higher-level-programming languages:
 * SQL Queries
 * JavaScript class, constructor, objects and conditions
 
-  Author:
-  [Mithamo Beth](https://github.com/Mythamor#hi-there-)
+>  Author: [Mithamo Beth](https://github.com/Mythamor#hi-there-)
+
+> Website [Mithamo.tech](https://www.mithamo.tech)
